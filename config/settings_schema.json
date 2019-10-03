@@ -395,7 +395,7 @@
           "zh-CN": "字体",
           "zh-TW": "字型"
         },
-        "default": "work_sans_n6"
+        "default": "poppins_n6"
       },
       {
         "type": "range",
@@ -459,7 +459,7 @@
           "zh-CN": "字体",
           "zh-TW": "字型"
         },
-        "default": "work_sans_n4"
+        "default": "poppins_n4"
       },
       {
         "type": "range",

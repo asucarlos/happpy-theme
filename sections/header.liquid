@@ -57,6 +57,7 @@
   {% endif %}
 
   <header class="site-header{% if section.settings.align_logo == 'left' %} border-bottom logo--left{% else %} logo--center{% endif %}" role="banner">
+
     <div class="grid grid--no-gutters grid--table site-header__mobile-nav">
       {% if section.settings.align_logo == 'center' %}
         {%- assign logo_classes = 'medium-up--one-third medium-up--push-one-third logo-align--center' -%}
@@ -110,7 +111,7 @@
         </nav>
       {% endif %}
 
-      <div class="grid__item {% if section.settings.align_logo == 'left' %}medium-up--one-quarter{% else %}medium-up--one-third medium-up--push-one-third{% endif %} text-right site-header__icons{% if shop.customer_accounts_enabled %} site-header__icons--plus{% endif %}">
+      {% comment %} <div class="grid__item {% if section.settings.align_logo == 'left' %}medium-up--one-quarter{% else %}medium-up--one-third medium-up--push-one-third{% endif %} text-right site-header__icons{% if shop.customer_accounts_enabled %} site-header__icons--plus{% endif %}">
         <div class="site-header__icons-wrapper">
           <div class="site-header__search site-header__icon">
             {% include 'search-form' %}
@@ -119,8 +120,8 @@
           <button type="button" class="btn--link site-header__icon site-header__search-toggle js-drawer-open-top">
             {% include 'icon-search' %}
             <span class="icon__fallback-text">{{ 'layout.navigation.search' | t }}</span>
-          </button>
-
+          </button> {% endcomment %}
+{% comment %} 
           {% if shop.customer_accounts_enabled %}
             {% if customer %}
               <a href="/account" class="site-header__icon site-header__account">
@@ -158,7 +159,7 @@
                 {% include 'icon-chevron-down' %}
               </div>
             {% endform %}
-          {% endif %}
+          {% endif %} {% endcomment %}
 
           {% unless linklists[section.settings.main_linklist] == blank %}
             <button type="button" class="btn--link site-header__icon site-header__menu js-mobile-nav-toggle mobile-nav--open" aria-controls="MobileNav"  aria-expanded="false" aria-label="{{ 'layout.navigation.menu' | t }}">

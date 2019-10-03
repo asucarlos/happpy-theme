@@ -515,7 +515,7 @@ $z-index-giftcard-code: 5;
     and slick-theme.scss (at Slick Slider Theme). Upgrade each area individually.
   - Remove `outline: none` from `.slick-dots li button`
 ==============================================================================*/
-$slick-font-family: "slick-icons, sans-serif";
+$slick-font-family: "poppins, sans-serif";
 $slick-arrow-color: $color-slideshow-arrows;
 $slick-dot-color: $color-slideshow-dots;
 $slick-dot-color-active: $slick-dot-color !default;
@@ -980,6 +980,10 @@ $grid-breakpoints: (
   &[class*="--push"] {
     position: relative;
   }
+}
+
+#AccessibleNav {
+  float: right;
 }
 
 /*============================================================================
@@ -2891,7 +2895,10 @@ hr {
     margin-bottom: $section-spacing;
   }
 }
+grid nav.grid__item {
+  float: right;
 
+}
 /*============================================================================
   Animation Classes and Keyframes
 ==============================================================================*/
@@ -4542,8 +4549,8 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 
 /*================ MODULES ================*/
 .site-header {
-  background-color: $color-body;
-  position: relative;
+  background-color: transparent;
+  position: absolute;
   padding: 0 $gutter-site;
 
   @include media-query($small) {
@@ -4557,6 +4564,11 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
     }
   }
 }
+
+// .site-header::before{
+//   background-color: $color_image_overlay;
+//   opacity: $opacity_image_overlay;
+// }
 
 .announcement-bar {
   text-align: center;
@@ -5372,7 +5384,7 @@ $nav-button-padding: 15px;
 .site-header__mobile-nav {
   z-index: 999;
   position: relative;
-  background-color: $color-body;
+  background-color: transparent;
 
   @include media-query($small) {
     @include display-flexbox();
@@ -6482,6 +6494,7 @@ $toolbar-height-small: 46px;
 }
 
 .hero__inner {
+  height: 100vh;
   position: relative;
   display: table-cell;
   vertical-align: middle;
